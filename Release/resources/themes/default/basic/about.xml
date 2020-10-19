@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="370,190" caption="0,0,0,35">
+  <VBox bkcolor="bk_wnd_darkcolor" width="370" height="190">
+    <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
+      <Control width="auto" height="auto" bkimage="logo_18x18.png" valign="center" margin="8"/>
+      <Label text="关于" valign="center" margin="8"/>
+      <Control />
+      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
+    </HBox>
+    <Box>
+      <VBox margin="0,0,0,0" valign="center" halign="center" width="auto" height="auto">
+        <Label name="tooltip" text="本程序使用的第三方库" align="center"/>
+        <Label text="NIMDuilib、ZXing、libpng、jsoncpp、cpr" align="center"/>
+        </VBox>
+    </Box>
+    <Label text="本程序仅供技术交流使用,不承担任何责任。" normaltextcolor="red" font="arial_bold_18" align="center"/>
+  </VBox>
+</Window>

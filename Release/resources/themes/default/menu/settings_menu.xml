@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <VListBox class="menu">
+    <!--<MenuElement class="menu_element" name="first" width="180">
+      <Button width="auto" height="auto" bkimage="menu_settings.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="System settings" margin="30,0,0,0"/>
+    </MenuElement>
+    <MenuElement class="menu_element" name="second" width="180">
+      <Button width="auto" height="auto" bkimage="menu_proxy.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="Proxy settings" margin="30,0,0,0"/>
+    </MenuElement>
+    <MenuElement class="menu_element" name="third" width="180">
+      <Button width="auto" height="auto" bkimage="menu_logs.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="Logs directory" margin="30,0,0,0"/>
+    </MenuElement>
+    <MenuElement class="menu_element" name="fourth" width="180">
+      <Button width="auto" height="auto" bkimage="menu_tree.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="Menu tree" margin="30,0,0,0"/>
+      <MenuElement class="menu_element" name="sub_menu" width="180">
+        <Label class="menu_text" text="Statically created"/>
+      </MenuElement>
+    </MenuElement>-->
+    <MenuElement class="menu_element" name ="setting" width="180">
+      <Button width="auto" height="auto" bkimage="menu_settings.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="设置" margin="30,0,0,0" />
+    </MenuElement>
+    <MenuElement class="menu_element" name="signout" width="180">
+      <Button width="auto" height="auto" bkimage="menu_signout.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="注销" margin="30,0,0,0"/>
+    </MenuElement>
+    <MenuElement class="menu_element" name="about" width="180">
+      <Button width="auto" height="auto" bkimage="menu_about.png" valign="center" mouse="false"/>
+      <Label class="menu_text" text="关于" margin="30,0,0,0"/>
+    </MenuElement>
+  </VListBox>
+</Window>

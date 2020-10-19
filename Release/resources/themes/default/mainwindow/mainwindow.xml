@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="800,600" caption="0,0,0,35" >
+  <VBox bkimage="bkimage.jpg">
+    <!--标题栏-->
+    <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
+      <Control width="auto" height="auto" bkimage="logo_18x18.png" valign="center" margin="8"/>
+      <Label text="超星自动签到" valign="center" margin="8"/>
+      <Control />
+      <!--<Button class="btn_wnd_settings" name="settings" margin="4,6,0,0"/>-->
+      <Button class="btn_wnd_settings" name="setting_wnd_btn" margin="4,6,0,0"/>
+      <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0" />
+      <!--<Box width="21" margin="4,6,0,0">
+        <Button class="btn_wnd_max" name="maxbtn"/>
+        <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+      </Box>-->
+      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
+    </HBox>
+    <HBox padding="20,20,20,20">
+      <!--左侧课程表-->
+      <HBox width="auto">
+        <VBox width="20">
+          <Option class="week_option" name="monday" group="week" text="星期一" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;0&quot;" />
+          </Option>
+          <Option class="week_option" name="tuesday" group="week" text="星期二" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;1&quot;" />
+          </Option>
+          <Option class="week_option" name="wednesday" group="week" text="星期三" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;2&quot;" />
+          </Option>
+          <Option class="week_option" name="thursday" group="week" text="星期四" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;3&quot;" />
+          </Option>
+          <Option class="week_option" name="friday" group="week" text="星期五" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;4&quot;" />
+          </Option>
+          <Option class="week_option" name="saturday" group="week" text="星期六" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;5&quot;" />
+          </Option>
+          <Option class="week_option" name="sunday" group="week" text="星期日" singleline="false" width="20" height="stretch">
+            <Event type="select" receiver="weeklist" applyattribute="selectedid=&quot;6&quot;" />
+          </Option>
+          <Button class="btn_add" name="addbtn" width="20" height="20" />
+        </VBox>
+        <Box width="auto">
+          <TabBox width="300" name="weeklist" fadeswitch="true">
+            <VListBox class="list" name="list1" bkimage="Monday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list2" bkimage="Tuesday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list3" bkimage="Wednesday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list4" bkimage="Thursday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list5" bkimage="Friday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list6" bkimage="Saturday.jpg">
+            </VListBox>
+            <VListBox class="list" name="list7" bkimage="Sunday.jpg">
+            </VListBox>
+          </TabBox>
+        </Box>
+      </HBox>
+      <!--右侧布局-->
+      <VBox margin="20" childmargin="20">
+        <HBox height="auto" childmargin="10">
+          <Label name="course_name" text="课程名" font="system_underline_22"/>
+          <Control mouse="false" width="stretch" />
+          <Button class="btn_global_blue_80x30" name="editbtn" text="编辑" />
+          <!--<Button class="btn_global_blue_80x30" name="savebtn" text="保存" />-->
+        </HBox>
+        <VBox childmargin="10" height="auto">
+          <HBox height="auto" childmargin="5" >
+            <Label font="arial_16" text="上课时间" />
+            <RichEdit class="simple input" name="starttime" font="arial_16" width="auto" rich="false" multiline="false" text="7:50" readonly="true"/>
+            <Label font="arial_16" text="－" />
+            <RichEdit class="simple input" name="endtime" font="arial_16" width="auto" rich="false" multiline="false" text="9:25" readonly="true"/>
+          </HBox>
+        </VBox>
+        <HBox name="checkgroup" padding="20,20,20,20" childmargin="20" bkcolor="trans_white" borderround="20,20" bordersize="2" bordercolor="gray" height="stretch" width="stretch">
+          <VBox width="auto" childmargin="10">
+            <CheckBox class="checkbox_font14" name="autosign" text="自动签到" />
+            <CheckBox class="checkbox_font14" name="autoanswer" text="自动抢答" />
+          </VBox>
+          <VBox width="auto" childmargin="10">
+            <CheckBox class="checkbox_font14" name="multisign" text="多次签到" />
+            <CheckBox class="checkbox_font14" name="notfirstsign" text="不首签" />
+          </VBox>
+          <!--遮挡控件，截获鼠标消息用-->
+          <Control name="disablectl" width="stretch" height="stretch" visible="true" mouse="true" float="true" />
+        </HBox>
+        <HBox height="auto" childmargin="20">
+          <Control width="stretch" mouse="false" />
+          <Button class="btn_global_blue_80x30" name="startbtn" text="开始监听" />
+          <Button class="btn_global_red_80x30" name="stopbtn" text="停止监听" />
+          <Control width="stretch" mouse="false" />
+        </HBox>
+        <Box height="auto">
+          <RichEdit class="simple" autovscroll="true" vscrollbar="true" bkcolor="trans_white" font="arial_14" readonly="false" multiline="true" height="200" padding="10,10,10" disabledtextcolor="darkcolor" text="[2020-04-14 21:30]: 【课程名】签到成功&#x000A;[2020-04-14 21:33]: 【课程名】抢答成功"/>
+        </Box>
+      </VBox>
+    </HBox>
+  </VBox>
+</Window>

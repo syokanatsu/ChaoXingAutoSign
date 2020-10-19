@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <ListContainerElement class="listitem" normalcolor="trans_white" height="auto">
+    <HBox height="auto" mouse="false" padding="10,5,10,5">
+      <Label name="indexlbl" text="第01节" mouse="false" height="stretch"/>
+      <Control width="stretch" mouse="false"/>
+      <Label name="timelbl" text="07:50-08:35" mouse="false"/>
+      <Button class="btn_edit" name="itemeditbtn" />
+    </HBox>
+  </ListContainerElement>
+</Window>

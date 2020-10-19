@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="600,400" caption="0,0,0,35">
+  <VBox bkcolor="bk_wnd_darkcolor">
+    <!--标题栏-->
+    <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
+      <Control width="auto" height="auto" bkimage="logo_18x18.png" valign="center" margin="8"/>
+      <Label text="设置" valign="center" margin="8"/>
+      <Control />
+      <!--<Button class="btn_wnd_settings" name="settings" margin="4,6,0,0"/>-->
+      <!--<Button class="btn_wnd_settings" name="setting_wnd_btn" margin="4,6,0,0"/>-->
+      <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0" />
+      <!--<Box width="21" margin="4,6,0,0">
+          <Button class="btn_wnd_max" name="maxbtn"/>
+          <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+        </Box>-->
+      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
+    </HBox>
+    <Box padding="20,20,20,20">
+      <VBox childmargin="10">
+        <HBox height="25">
+          <Label font="arial_16" text="当前的周数" height="auto" valign="center" tooltiptext="开学到现在几周，便于我们确定单双周"/>
+          <Combo class="list" name="CurWeeksCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+          <Label font="arial_16" text="本学期总周数" height="auto" valign="center" tooltiptext="请选择本学期总共多少周"/>
+          <Combo class="list" name="TotalWeeksCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+        </HBox>
+        <HBox height="25">
+          <Label font="arial_16" text="一般单节课时长" height="auto" valign="center" tooltiptext="修改后将自动推算一天安排"/>
+          <Combo class="list" name="PerClassTimeCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+          <Label font="arial_16" text="一般课间休息时长" height="auto" valign="center" tooltiptext="修改后将自动推算一天安排"/>
+          <Combo class="list" name="PerBreakTimeCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+        </HBox>
+        <HBox  height="25">
+          <Label font="arial_16" text="一天课节数:  " height="auto" valign="center"/>
+          <Label font="arial_16" text="上午" height="auto" valign="center"/>
+          <Combo class="list" name="ForenoonCoursesCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+          <Label font="arial_16" text="下午" height="auto" valign="center"/>
+          <Combo class="list" name="AfternoonCoursesCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+          <Label font="arial_16" text="晚上" height="auto" valign="center"/>
+          <Combo class="list" name="NightCoursesCmb" margin="5,0,20,0" padding="6" bkimage="file='../public/combo/normal.png' corner='5,5,30,5'"/>
+        </HBox>
+        <HBox childmargin="10">
+          <VListBox class="list" name="ForenoonCoursesList" padding="5,3,5,3"/>
+          <VListBox class="list" name="AfternoonCoursesList" padding="5,3,5,3"/>
+          <VListBox class="list" name="NightCoursesList" padding="5,3,5,3"/>
+        </HBox>
+      </VBox>
+    </Box>
+  </VBox>
+</Window>

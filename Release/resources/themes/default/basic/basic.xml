@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="800,600" caption="0,0,0,35" >
+  <VBox bkcolor="bk_wnd_darkcolor">
+    <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
+      <Control width="auto" height="auto" bkimage="logo_18x18.png" valign="center" margin="8"/>
+      <Label text="超星自动签到" valign="center" margin="8"/>
+      <Control />
+      <Button class="btn_wnd_settings" name="settings" margin="4,6,0,0"/>
+      <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0" />
+      <!--<Box width="21" margin="4,6,0,0">
+        <Button class="btn_wnd_max" name="maxbtn"/>
+        <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+      </Box>-->
+      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
+    </HBox>
+    <Box>
+      <HBox padding="30,30,30,30" childmargin="10">
+        <VBox width="300" childmargin="10">
+          <Label text="全部课程列表" width="stretch" align="center" textpadding="10,10,10,10" bkcolor="white"/>
+          <!-- CoursesList -->
+          <VListBox class="list" name="courseslist" padding="5,3,5,3" height="stretch">
+          </VListBox>
+        </VBox>
+        <VBox>
+          <HBox height="300">
+            <Box>
+              <VBox width="auto" height="auto" halign="center" valign="center" childmargin="10">
+                <Button class="btn_global_blue_80x30" text="添加" name="addbtn" />
+                <Button class="btn_global_red_80x30" text="删除" name="removebtn" />
+              </VBox>
+            </Box>
+            <VBox width="300" childmargin="10">
+              <Label text="已选择课程列表" width="stretch" align="center" textpadding="10,10,10,10" bkcolor="white"/>
+              <!-- SelectList -->
+              <VListBox class="list" name="selectlist" padding="5,3,5,3" height="stretch">
+              </VListBox>
+            </VBox>
+          </HBox>
+          <VBox>
+            <!--设置频率-->
+            <HBox height="auto" valign="center" childmargin="10" margin="0,10" >
+              <Label text="检测频率" height="stretch" align="vcenter" />
+              <Slider class="slider_green" name="delaysld" min="10" max="600" value="60" margin="10"/>
+              <RichEdit class="simple input" name="delaytxt" height="30" width="50" margin="0,3" padding="6,6,6" align="right" number="true" rich="false" multiline="false" />
+              <Label text="秒" height="stretch" align="vcenter" />
+            </HBox>
+            <HBox height="auto" childmargin="10">
+              <CheckBox class="checkbox_font12" name="multitimeschk" text="多次签到" tooltiptext="目前这个选项是没有用的，默认是多次签到的" selected="true" margin="0,5,0,10"/>
+              <CheckBox class="checkbox_font12" name="notfirstsignchk" text="不首签" tooltiptext="不第一个签到，可以避免尴尬场面，建议勾选" selected="true" margin="0,5,0,10" />
+              <Label text="签到名次" tooltiptext="勾选不首签有效，可定义自己签到名次不先于多少名" align="vcenter" margin="0,5,0,10"/>
+              <RichEdit class="simple input" name="ranktxt" height="auto" width="30" padding="1,1,1,1" align="right" number="true" rich="false" multiline="false" margin="0,5,0,10" />
+            </HBox>
+            <HBox height="auto" width="auto" halign="center" valign="center">
+              <Label text="签到监听次数:" font="arial_bold_16"/>
+              <Label text="0" name="spyontimes" width="30" align="right" font="arial_bold_16" />
+              <Label text="签到成功次数:" margin="10" font="arial_bold_16" />
+              <Label text="0" name="successtimes" width="30" align="right" font="arial_bold_16" />
+            </HBox>
+            <Box>
+              <HBox childmargin="20" width="auto" height="auto" halign="center" valign="center">
+                <Button class="btn_global_blue_80x30" name="startbtn" text="开始监听" />
+                <Button class="btn_global_red_80x30" name="endbtn" text="停止监听" enabled="false" />
+              </HBox>
+            </Box>
+            <Box height="auto" valign="bottom" bordersize="1" bordercolor="blue" >
+              <Label text="等待监听" name="spystatustxt" width="stretch" font="arial_bold_20" align="center" margin="0,10,0,10"/>
+            </Box>
+          </VBox>
+        </VBox>
+      </HBox> 
+    </Box>
+  </VBox>
+</Window>

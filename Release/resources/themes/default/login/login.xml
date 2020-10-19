@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="400,300" caption="0,0,0,35">
+  <VBox bkcolor="bk_wnd_darkcolor">
+    <HBox width="stretch" height="35">
+      <!--显示二维码登录界面-->
+      <Button class="btn_global_white_80x30" name="showQRbtn" margin="4,6,0,0" text="二维码登录" >
+        <Event type="buttondown" receiver="QRCodeLogin showPWbtn getQRCodebtn" applyattribute="fadevisible=&quot;true&quot;" />
+        <Event type="buttondown" receiver="PasswordLogin showQRbtn loginbtn" applyattribute="fadevisible=&quot;false&quot;" />
+      </Button>
+      <!--显示账号密码登录界面-->
+      <Button class="btn_global_white_80x30" name="showPWbtn" margin="4,6,0,0" text="密码登录" visible="false" >
+        <Event type="buttondown" receiver="QRCodeLogin showPWbtn getQRCodebtn" applyattribute="fadevisible=&quot;false&quot;" />
+        <Event type="buttondown" receiver="PasswordLogin showQRbtn loginbtn" applyattribute="fadevisible=&quot;true&quot;" />
+      </Button>
+      <Control />
+      <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0" />
+      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
+    </HBox>
+    <Box>
+      <!--二维码登录界面-->
+      <Box name="QRCodeLogin" bkcolor="bk_wnd_darkcolor" fadevisible="false" fadeinoutxfromright="true" width="stretch">
+        <VBox margin="0,0,0,10" valign="center" halign="center" width="auto" height="auto">
+          <Label name="qrcode" text="" height="200" width="200" bordersize="2" bordercolor="blue"/>
+        </VBox>
+      </Box>
+      <!--账号密码登录界面-->
+      <Box name="PasswordLogin" bkcolor="bk_wnd_darkcolor" fadeinoutxfromleft="true" width="stretch">
+        <VBox margin="0,0,0,0" valign="center" halign="center" width="auto" height="auto" childmargin="20">
+          <HBox width="200" height="auto" childmargin="10">
+            <Label text="账号" align="vcenter" height="stretch" nofocus="true"/>
+            <RichEdit class="prompt input" name="unameEdit" wanttab="false" prompttext="手机号" multiline="false" width="stretch" align="vcenter" height="30" padding="5,5,5,5"/>
+          </HBox>
+          <HBox width="stretch" height="auto" childmargin="10">
+            <Label text="密码" align="vcenter" height="stretch" nofocus="true"/>
+            <RichEdit class="prompt input" name="pwdEdit" wanttab="false" prompttext="密码" password="true" multiline="false" align="vcenter" width="stretch" height="30" padding="5,5,5,5"/>
+          </HBox>
+        </VBox>
+      </Box>
+      <!--按钮-->
+      <HBox margin="5,5,5,5" valign="bottom" halign="center" width="auto" height="auto" childmargin="20">
+        <Button class="btn_global_blue_80x30" name="loginbtn" margin="4,6,0,0" text="登录" fadeinoutxfromleft="true"/>
+        <Button class="btn_global_red_80x30" name="getQRCodebtn" margin="4,6,0,0" text="获取二维码" fadevisible="false" fadeinoutxfromright="true"/>
+      </HBox>
+    </Box>
+  </VBox>
+</Window>
